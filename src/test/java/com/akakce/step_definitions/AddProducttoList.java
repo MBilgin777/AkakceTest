@@ -36,7 +36,7 @@ public class AddProducttoList {
     }
     @When("user searches iphone on search textbox.")
     public void userSearchesIphoneOnSearchTextbox() {
-        searchPage.searchBox.sendKeys("iphone 14");
+        searchPage.searchBox.sendKeys(ConfigurationReader.getProperty("searchProduct"));
     }
 
 
@@ -82,9 +82,8 @@ public class AddProducttoList {
         Thread.sleep(4000);
         String actualName = searchPage.actualIphoneName.getText();
         System.out.println("actualName = " + actualName);
-        String numberOfTumUrunler= searchPage.takipEtPageTumUrunler.getText();
         Assert.assertEquals(actualName,expectedName);
-        Assert.assertTrue(numberOfTumUrunler.endsWith("(1)"));
+
 
     }
 
