@@ -49,15 +49,17 @@ public class AddProducttoList {
 
     @And("user clicks first iphone14.")
     public void userClicksFirstIphone() throws InterruptedException {
-        expectedName = searchPage.expextedIphoneName.getText();
 
-        System.out.println("expectedName = " + expectedName);
         Thread.sleep(2000);
         searchPage.uruneGit.click();
     }
 
     @And("user scrolls down the page.")
     public void userScrollsDownThePage() {
+        expectedName = searchPage.expextedIphoneName.getText();
+
+        System.out.println("expectedName = " + expectedName);
+
         BrowserUtils.scrollToElement(searchPage.scroll);
     }
 
@@ -65,12 +67,14 @@ public class AddProducttoList {
     public void userClicksTakipEtButton() throws InterruptedException {
         System.out.println(searchPage.takipEtButton.getText().toString());
         Thread.sleep(1000);
-        searchPage.takipEtButton.click();
+        if(searchPage.takipEtButton.getText().contains("Takip Et")) {
+            searchPage.takipEtButton.click();
+        }
     }
 
     @And("user goes to Takip Listem Page.")
     public void userGoesToTakipListemPage() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     searchPage.takipEtPageButton.click();
     }
 

@@ -19,26 +19,26 @@ public class SearchPage {
     @FindBy(xpath = "//i[normalize-space()='Ara']")
     public WebElement searchBoxButton;
 
-    @FindBy(xpath = "//b[normalize-space()='Ürüne Git (+116)']")
+    @FindBy(xpath = "/html[1]/body[1]/div[2]/ul[1]/li[1]/a[1]/span[1]/span[5]/b[1]")
     public WebElement uruneGit;
 
-    @FindBy(xpath = "//span[contains(text(),\"Takip Et\")]")
-    ////span[contains(text(),"Takip Et")]
+    @FindBy(xpath = "/html[1]/body[1]/main[1]/div[1]/div[1]/div[3]/div[1]/div[1]/span[1]")
     public WebElement takipEtButton;
 
-    @FindBy(xpath = "//a[@id='H_f_v8']")
+
+    @FindBy(xpath = "/html[1]/body[1]/div[1]/header[1]/div[2]/a[1]")
     public WebElement takipEtPageButton;
 
-    @FindBy(xpath = "//span[@class='ac_text']")
+    @FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/div[4]/div[1]/ul[1]/li[1]/a[1]/span[1]/span[1]")
     public WebElement takipEtPageTumUrunler;
 
-    @FindBy(xpath = "//h3[normalize-space()='iPhone 14 128 GB']")
+    @FindBy(xpath = "/html[1]/body[1]/main[1]/div[1]/div[1]/div[1]/h1[1]")
     public WebElement expextedIphoneName;
 
-    @FindBy(xpath = "//h3[@class='pn_v8']")
+    @FindBy(xpath = "/html[1]/body[1]/div[2]/div[1]/form[1]/ul[1]/li[2]/a[1]/span[1]/h3[1]")
     public WebElement actualIphoneName;
 
-    @FindBy(xpath = "//b[contains(text(),'Fiyat Değişimi')]")
+    @FindBy(xpath = "/html[1]/body[1]/main[1]/div[1]/div[1]/div[3]/div[1]/p[1]/b[1]")
     public WebElement scroll;
 
 
