@@ -2,7 +2,7 @@ Feature: User work on the Takip Listem
   User Story:
     1.Verify that user can add Product to Takip Listem.
 
-  Background: User is on Akakce.com home page.
+   Background: User is on Akakce.com home page.
     Given user is on the home page.
 
     Scenario: Verify that user can add product to follow list.

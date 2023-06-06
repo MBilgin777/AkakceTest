@@ -20,7 +20,6 @@ public class AddProducttoList {
     LoginPage loginPage =new LoginPage();
     String expectedName;
 
-
     WebDriverWait wait=new WebDriverWait(Driver.getDriver(),15);
 
     @Given("user is on the home page.")
