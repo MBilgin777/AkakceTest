@@ -11,6 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -46,15 +47,27 @@ public class AddProducttoList {
         searchPage.searchBoxButton.click();
     }
 
-    @And("user clicks first iphone14.")
-    public void userClicksFirstIphone() throws InterruptedException {
+    @And("user clicks first iphone.")
+    public void userClicksFirstIphone() {
 
-        Thread.sleep(2000);
-        searchPage.uruneGit.click();
+
+        try {
+                searchPage.uruneGit.click();
+
+        } catch (NoSuchElementException e) {
+            try {
+                searchPage.uruneGit2.click();
+            } catch (NoSuchElementException r){
+                searchPage.uruneGit3.click();
+            }
+
+        }
+
     }
 
     @And("user scrolls down the page.")
     public void userScrollsDownThePage() {
+
         expectedName = searchPage.expextedIphoneName.getText();
 
         System.out.println("expectedName = " + expectedName);
@@ -64,7 +77,7 @@ public class AddProducttoList {
 
     @And("user clicks Takip Et Button.")
     public void userClicksTakipEtButton() throws InterruptedException {
-        System.out.println(searchPage.takipEtButton.getText().toString());
+        System.out.println(searchPage.takipEtButton.getText());
         Thread.sleep(1000);
         if(searchPage.takipEtButton.getText().contains("Takip Et")) {
             searchPage.takipEtButton.click();
@@ -79,7 +92,7 @@ public class AddProducttoList {
 
     @Then("user verify that the product is added to Takip Listem page.")
     public void userVerifyThatTheProductIsAddedToTakipListemPage() throws InterruptedException {
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         String actualName = searchPage.actualIphoneName.getText();
         System.out.println("actualName = " + actualName);
         Assert.assertEquals(actualName,expectedName);

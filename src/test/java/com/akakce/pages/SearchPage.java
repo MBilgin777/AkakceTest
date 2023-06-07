@@ -22,6 +22,12 @@ public class SearchPage {
     @FindBy(xpath = "/html[1]/body[1]/div[2]/ul[1]/li[1]/a[1]/span[1]/span[5]/b[1]")
     public WebElement uruneGit;
 
+    @FindBy(xpath ="/html[1]/body[1]/div[2]/ul[1]/li[1]/a[1]/span[1]/span[6]/b[1]")
+    public WebElement uruneGit2;
+
+    @FindBy(xpath ="/html[1]/body[1]/div[2]/ul[1]/li[1]/a[1]/span[1]/span[4]/b[1]")
+    public WebElement uruneGit3;
+
     @FindBy(xpath = "/html[1]/body[1]/main[1]/div[1]/div[1]/div[3]/div[1]/div[1]/span[1]")
     public WebElement takipEtButton;
 

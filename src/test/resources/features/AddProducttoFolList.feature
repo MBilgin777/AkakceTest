@@ -8,7 +8,7 @@ Feature: User work on the Takip Listem
     Scenario: Verify that user can add product to follow list.
       When user searches iphone on search textbox.
       And user clicks searchButton.
-      And user clicks first iphone14.
+      And user clicks first iphone.
       And user scrolls down the page.
       And user clicks Takip Et Button.
       And user goes to Takip Listem Page.
